@@ -10,3 +10,15 @@ export const savedData = async(data)=> {
     }
 
 }
+
+
+
+export const getData = async()=> {
+    try {
+      let response  =  await axios.get(`${API_URL}/get`)
+      return response.data;
+    } catch (error) {
+        console.error('Error while calling save data api',error.message)
+    }
+
+}
